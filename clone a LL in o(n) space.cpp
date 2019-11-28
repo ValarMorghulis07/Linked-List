@@ -18,12 +18,12 @@ ll INF=1e9+7;
 
 Node *create(int x)
 {
- Node *temp=new Node();
- temp->data=x;
+ Node *temp=new Node(x);
+ //temp->data=x;
  temp->next=NULL;
  temp->arb=NULL;
  return temp;
-
+ 
 }
 Node *copyList(Node *head)
 {
@@ -40,7 +40,6 @@ Node *copyList(Node *head)
     temp->next=q;
     temp=temp->next;
     p=p->next;
-
   }
   p=head;
   Node *q=head1;
