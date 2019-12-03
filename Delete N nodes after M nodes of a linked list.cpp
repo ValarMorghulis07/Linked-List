@@ -15,6 +15,7 @@ typedef long long int ll;
 ll HRX=1e18;
 ll INF=1e9+7;
 
+//M!=0
 void linkdelete(struct Node  *head, int M, int N)
 {
   struct Node *cur=head,*temp;
