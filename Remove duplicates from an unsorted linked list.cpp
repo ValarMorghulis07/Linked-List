@@ -16,7 +16,7 @@ ll HRX=1e18;
 ll INF=1e9+7;
 
 
-Node *removeDuplicates(Node *root)
+Node *removeDuplicates(Node *root)//o(n) && o(n)
 {
  Node *temp1=root,*temp2=NULL;
  unordered_set<int>s;
@@ -37,3 +37,22 @@ Node *removeDuplicates(Node *root)
  return root;
 
 }
+
+Node *removeDuplicates(Node *root)//o(n*n) && o(1)
+{
+ Node *cur=root;
+ while(cur)
+ {
+   Node *temp=cur;
+   while(temp->next)
+   {
+     if(temp->next->data==cur->data)
+      temp->next=temp->next->next;
+     else
+      temp=temp->next;
+   }
+   cur=cur->next;
+ }
+ return root;
+}
+
