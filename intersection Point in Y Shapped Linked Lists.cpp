@@ -22,8 +22,8 @@ int getpoint(Node* head1,Node* head2,int d)
  Node *temp2=head2;
  for(int i=0;i<d;i++)
  {
-  if(temp1==NULL)
-   return -1;
+  /*if(temp1==NULL)
+   return -1;*/
   temp1=temp1->next;
  }
 
