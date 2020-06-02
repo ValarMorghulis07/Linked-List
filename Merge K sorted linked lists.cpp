@@ -23,7 +23,7 @@ struct compare
   }
 };
 
-Node * mergeKLists(Node *arr[], int N)
+Node * mergeKLists(Node *arr[], int N)O(nklogk)
 {
  Node* head=NULL,*last=NULL;
  priority_queue<Node*,vector<Node*>,compare>pq;
@@ -49,3 +49,4 @@ Node * mergeKLists(Node *arr[], int N)
  }
  return head;
 }
+//k sorted LL each of size n
