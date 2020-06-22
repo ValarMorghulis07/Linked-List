@@ -42,6 +42,7 @@
       }
        
       ListNode*temp1=head,*temp2=NULL,*temp3;
+      // Reverse first half
       while(temp1!=slow)
       {
        temp3=temp1->next;
