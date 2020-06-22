@@ -1,5 +1,6 @@
  bool isPalindrome(ListNode* head)
     {
+      // O(n) && O(n) space
       if(!head || !(head->next))
            return true;
       stack<int>ss;
