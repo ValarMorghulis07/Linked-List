@@ -15,7 +15,7 @@ typedef long long int ll;
 ll HRX=1e18;
 ll INF=1e9+7;
 
-
+//Iterative
 Node* reverseList(Node *head)
 {
   Node* temp1=head;
@@ -30,3 +30,31 @@ Node* reverseList(Node *head)
   }
   return temp2;
 }
+
+//Recursive-it's just reverse in group of size of the LL
+ ListNode* reverseList(ListNode* head) 
+    {
+      if(!head)
+          return NULL;
+      ListNode* temp1=head,*temp2=NULL,*temp3,*temp4=head;
+      int cnt=0;
+      while(temp4)
+      {
+        temp4=temp4->next;
+        cnt++;
+      }
+      int zz=0;
+      //temp1=head;
+      while(temp1 && zz<cnt)
+      {
+       temp3=temp1->next;
+       temp1->next=temp2;
+       temp2=temp1;
+       temp1=temp3;
+       zz++;
+      }
+      if(temp3)
+        head->next=reverseList(temp3);
+      return temp2;
+    }
+};
