@@ -33,7 +33,7 @@ public:
      }
      return temp1;
      */
-    if(!head || !head->next)
+    if(!head || !head->next)// O(constant space)
         return head;
     ListNode* slow=head,*fast=head->next;
     while(fast && fast->next)
