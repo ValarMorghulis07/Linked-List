@@ -16,6 +16,7 @@ ll HRX=1e18;
 ll INF=1e9+7;
 
 //Iterative
+
 Node* reverseList(Node *head)
 {
   Node* temp1=head;
@@ -32,6 +33,7 @@ Node* reverseList(Node *head)
 }
 
 //Recursive-it's just reverse in group of size of the LL
+
  ListNode* reverseList(ListNode* head) 
     {
       if(!head)
