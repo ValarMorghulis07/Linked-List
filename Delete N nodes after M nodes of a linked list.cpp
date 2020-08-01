@@ -1,4 +1,4 @@
-
+//M!=0
 void linkdelete(struct Node  *head, int M, int N)
 {
   if(!head)
