@@ -21,7 +21,7 @@ ll INF=1e9+7;
 
 if(!head || !head->next)
    return head;
-ListNode * prevNode = NULL;
+ListNode * prev = NULL;
 ListNode * tmp = NULL;
 ListNode  * curr = head;
 
@@ -30,11 +30,11 @@ while(curr && curr->next)
   tmp = curr->next;
   curr->next = tmp->next;
   tmp->next = curr;
-  if(prevNode)
-    prevNode->next = tmp;
+  if(prev)
+    prev->next = tmp;
   else
     head = tmp;
-  prevNode = curr;
+  prev = curr;
   curr = curr->next;
 }
   return head;
