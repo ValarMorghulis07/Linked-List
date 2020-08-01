@@ -23,49 +23,58 @@
           return false;
       else
           return true;
+ }
   
     // O(n) && O(1) space
-   /*
-     if(!head || !(head->next))
-           return true;
-      bool even=1;
-      ListNode* slow=head,*fast=head;
-      while(fast && fast->next)
-      {
-        slow=slow->next;
-        fast=fast->next->next;
-      }
-      if(fast)
-      {
-       even=0;
-       slow=slow->next;
-      }
-       
-      ListNode*temp1=head,*temp2=NULL,*temp3;
-      // Reverse first half
-      while(temp1!=slow)
-      {
-       temp3=temp1->next;
-       temp1->next=temp2;
-       temp2=temp1;
-       temp1=temp3;
-      }
-      ListNode* cur=temp2;
-      if(!even)
-          cur=cur->next;
-      bool ff=0;
-      while(cur && slow)
-      {
-        if(cur->val!=slow->val)
-            ff=1;
-        cur=cur->next;
-        slow=slow->next;
-      }
-      if(ff)
+   /**
+ * Definition for singly-linked list.
+ * struct ListNode {
+ *     int val;
+ *     ListNode *next;
+ *     ListNode() : val(0), next(nullptr) {}
+ *     ListNode(int x) : val(x), next(nullptr) {}
+ *     ListNode(int x, ListNode *next) : val(x), next(next) {}
+ * };
+ */
+class Solution {
+public:
+    bool isPalindrome(ListNode* head) 
+    {
+     if(!head || !head->next)
+         return true;
+     bool even=0;
+     ListNode* slow=head,*fast=head;
+     while(fast && fast->next)
+     {
+      slow=slow->next;
+      fast=fast->next->next;
+     }
+     if(fast)
+     {
+      even=1;
+      slow=slow->next;
+     }
+     ListNode* cur2=slow;
+     ListNode* temp1=head,*temp2=NULL,*temp3=NULL;
+     while(temp1!=slow)
+     {
+      temp3=temp1->next;
+      temp1->next=temp2;
+      temp2=temp1;
+      temp1=temp3;
+     }
+     ListNode *cur1=temp2;
+     if(even)
+         cur1=cur1->next;
+    
+     while(cur1 && cur2)
+     {
+      if(cur1->val!=cur2->val)
           return false;
-      else
-          return true;
-          */
+      cur1=cur1->next;
+      cur2=cur2->next;
           
-
-    }
+     }
+     return true;
+   }
+};
