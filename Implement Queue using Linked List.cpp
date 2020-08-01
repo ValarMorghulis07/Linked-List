@@ -1,4 +1,4 @@
-#include <bits/stdc++.h>
+// Insert at end and remove from front
 
 void MyQueue:: push(int x)
 {
