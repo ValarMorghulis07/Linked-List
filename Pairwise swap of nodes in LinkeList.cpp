@@ -15,14 +15,27 @@ typedef long long int ll;
 ll HRX=1e18;
 ll INF=1e9+7;
 
-struct Node* pairwise_swap(struct Node* head)
+// In Recursive approach just swap reverse LL in size of 2
+
+// Iterative
+
+if(!head || !head->next)
+   return head;
+ListNode * prevNode = NULL;
+ListNode * tmp = NULL;
+ListNode  * curr = head;
+
+while(curr && curr->next)
 {
-   struct Node* temp=head;
-    struct Node* temp1=head;
-   while(temp!=NULL && temp->next!=NULL)
-   {
-     swap(temp->data,temp->next->data);
-     temp=temp->next->next;
-   }
-   return temp1;
+  tmp = curr->next;
+  curr->next = tmp->next;
+  tmp->next = curr;
+  if(prevNode)
+    prevNode->next = tmp;
+  else
+    head = tmp;
+  prevNode = curr;
+  curr = curr->next;
 }
+  return head;
+    	
