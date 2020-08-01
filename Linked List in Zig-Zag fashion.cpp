@@ -15,6 +15,8 @@ typedef long long int ll;
 ll HRX=1e18;
 ll INF=1e9+7;
 
+// Brute force solution is sort and swap alternate from index 1 (0-indexing)
+
 Node *zigZack(Node* head)
 {
  bool flag=true;
