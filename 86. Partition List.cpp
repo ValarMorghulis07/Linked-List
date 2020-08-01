@@ -1,10 +1,4 @@
-ListNode* create(int x)
-{
-  ListNode* temp=new ListNode(x);
 
-  temp->next=NULL;
-  return temp;
-}
 class Solution {
 public:
     ListNode* partition(ListNode* head, int x)
@@ -20,7 +14,7 @@ public:
       {
        if(temp->val<x)
        {
-         ListNode* temp1=create(temp->val);
+         ListNode* temp1=new ListNode(x);;
          if(bs==NULL)
          {
           bs=temp1;
@@ -35,7 +29,7 @@ public:
        }
           else
           {
-           ListNode* temp1=create(temp->val);
+           ListNode* temp1=new ListNode(x);;
            if(as==NULL)
            {
              as=temp1;
