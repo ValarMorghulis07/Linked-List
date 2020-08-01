@@ -10,7 +10,7 @@
  */
 class Solution {
 public:
-    ListNode* oddEvenList(ListNode* head)
+    ListNode* oddEvenList(ListNode* head) // This is entirely by making new set of nodes
     {
      if(!head)
          return NULL;
