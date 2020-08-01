@@ -15,6 +15,8 @@ typedef long long int ll;
 ll HRX=1e18;
 ll INF=1e9+7;
 
+//Insert at start and remove from start
+
 void MyStack ::push(int x)
 {
  StackNode* temp=new StackNode(x);
