@@ -41,8 +41,6 @@ public:
        int zz=temp->val;
        while(temp && temp->val==zz)
         temp=temp->next;
-
-
       }
       else
       {
@@ -59,7 +57,6 @@ public:
        }
         temp=temp->next;
       }
-
      }
      if(temp)
      {
