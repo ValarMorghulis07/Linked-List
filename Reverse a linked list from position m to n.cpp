@@ -34,7 +34,7 @@ public:
      if(prevStart)
          prevStart->next=temp2;
      else
-         head=temp2;
+         head=temp2;// reversing from index 1(1 based indexing)
      start->next=temp3;
      return head;
 
