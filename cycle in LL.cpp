@@ -38,6 +38,7 @@ void removeTheLoop(Node *head)
 
     }
   }
+}
 
 // 142. Linked List Cycle II(starting node of cycle)
 
