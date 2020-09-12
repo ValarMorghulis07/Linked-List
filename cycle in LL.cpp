@@ -1,19 +1,20 @@
 // Detect Loop in linked list
 
-int detectloop(Node *head)
-{
- Node *slow=head;
- Node *fast=head;
- while(slow && fast && fast->next)
- {
-  slow=slow->next;
-  fast=fast->next->next;
-  if(slow==fast)
-    return 1;
- }
- return 0;
-
-}
+class Solution {
+public:
+    bool hasCycle(ListNode *head) 
+    {
+     ListNode* slow=head,*fast=head;
+     while(fast && fast->next)
+     {
+      slow=slow->next;
+      fast=fast->next->next;
+      if(slow==fast)
+          return true;
+     }
+     return false;
+    }
+};
 
 // Remove loop in Linked List
 
