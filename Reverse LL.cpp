@@ -106,7 +106,7 @@ public:
     }
 };
 
-// Reverse a linked list from position m to n
+// 92.Reverse a linked list from position m to n
 
 class Solution {
 public:
@@ -142,7 +142,7 @@ public:
     }
 };
 
-// Rotate a Linked List(clockwise)
+// 61.Rotate a Linked List(clockwise)
 
 class Solution {
 public:
