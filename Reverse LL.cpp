@@ -3,20 +3,23 @@
 
 //Iterative
 
-Node* reverseList(Node *head)
-{
-  Node* temp1=head;
-  Node* temp2=NULL;
-  Node* temp3;
-  while(temp1!=NULL)
-  {
-    temp3=temp1->next;
-    temp1->next=temp2;
-    temp2=temp1;
-    temp1=temp3;
-  }
-  return temp2;
-}
+class Solution {
+public:
+    ListNode* reverseList(ListNode* head)
+    {
+     if(!head)
+         return NULL;
+     ListNode* temp1=head,*temp2=NULL,*temp3=NULL;
+     while(temp1)
+     {
+      temp3=temp1->next;
+      temp1->next=temp2;
+      temp2=temp1;
+      temp1=temp3;
+     }
+     return temp2;
+    };
+};
 
 //Recursive-it's just reverse in group of size of the LL
 
