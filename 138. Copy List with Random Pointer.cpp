@@ -30,4 +30,61 @@ public:
     }
 };
 
+// o(n) && o(1)
+
+/*
+// Definition for a Node.
+class Node {
+public:
+    int val;
+    Node* next;
+    Node* random;
+    
+    Node(int _val) {
+        val = _val;
+        next = NULL;
+        random = NULL;
+    }
+};
+*/
+
+class Solution {
+public:
+    Node* copyRandomList(Node* head) 
+    {
+     if(!head)
+         return NULL;
+     Node* cur=head;
+     Node* temp;
+     while(cur)
+     {
+      temp=cur->next;
+      cur->next=new Node(cur->val);// next of original will point to corresponding copied node;
+      cur->next->next=temp;// next of copied will point to next node in corresponding original
+      cur=temp;
+     }
+     cur=head;
+     while(cur)
+     {
+      if(cur->next && cur->random)
+          cur->next->random=cur->random->next;// random of copied points to corresponding nodes in copied
+      cur=cur->next ? cur->next->next : cur->next;// move to next pointer in original node
+     }
+     Node* original=head;
+     Node* copy=head->next;
+     Node* ans=copy;
+     while(original && copy)
+     {
+      original->next=original->next ? original->next->next : original->next;// restoring the next pointer of original
+      copy->next=copy->next ? copy->next->next : copy->next;// restoring the next pointer of original
+      original=original->next;
+      copy=copy->next;
+      
+      
+     }
+     return ans;
+    
+    }
+};
+
 
