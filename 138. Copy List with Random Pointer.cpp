@@ -63,8 +63,6 @@ public:
       copy->next=copy->next ? copy->next->next : copy->next;// restoring the next pointer of original
       original=original->next;
       copy=copy->next;
-      
-      
      }
      return ans;
     
