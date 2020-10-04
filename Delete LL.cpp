@@ -21,7 +21,7 @@ Node* deleteMid(Node *head)
    return head;
 }
 
-// Delete Alternate Nodes in LL
+// Delete Alternate Nodes in LL--> starting from 2(1 based indexing)
 
 void deleteAlt(struct Node *head)
 {
