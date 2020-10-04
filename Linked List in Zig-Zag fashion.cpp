@@ -22,7 +22,7 @@ Node *zigZack(Node* head) // 1->2->3->4
  bool flag=true;
 
  Node *cur=head;
- while(cur->next)
+ while(cur && cur->next)
  {
   if(flag)
   {
