@@ -17,7 +17,7 @@ ll INF=1e9+7;
 
 // Brute force solution is sort and swap alternate from index 1 (0-indexing)
 
-Node *zigZack(Node* head)
+Node *zigZack(Node* head) // 1->2->3->4
 {
  bool flag=true;
 
