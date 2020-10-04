@@ -12,7 +12,7 @@ Node* pairWiseSwap(struct Node* head)
   return head;
 }
 
-// Pairwise swap of nodes in LinkeList
+// 24. Pairwise swap of nodes in LinkeList
 
 class Solution {
 public:
