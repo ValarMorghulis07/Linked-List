@@ -145,6 +145,26 @@ public:
     }
 };
 
+// 24. Swap Nodes in Pairs
+
+
+class Solution {
+public:
+    ListNode* swapPairs(ListNode* head)
+    {
+     if(!head || !head->next)
+         return head;
+     ListNode* temp1=head;
+     while(temp1 && temp1->next)
+     {
+      swap(temp1->val,temp1->next->val);
+      temp1=temp1->next->next;
+     }
+     return head;
+    }
+};
+
+
 // 61.Rotate a Linked List(clockwise)
 
 class Solution {
