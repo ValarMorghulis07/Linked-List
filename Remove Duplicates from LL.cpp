@@ -44,7 +44,7 @@ public:
       }
       else
       {
-       ListNode *cur=new ListNode(temp->val);
+       ListNode *cur=new ListNode(temp->val); // if want to do in O(1) space ,just instead of cur use temp everywhere
        if(!start)
        {
         start=cur;
