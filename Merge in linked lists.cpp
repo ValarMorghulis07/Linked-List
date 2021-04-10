@@ -94,6 +94,45 @@ public:
 
 class Solution {
 public:
+     ListNode* Merge(ListNode* l1,ListNode* l2)
+    {
+     ListNode* start=NULL,*end=NULL;
+     if(l1->val<=l2->val)
+     {
+      start=l1;
+      end=l1;
+      l1=l1->next;
+     }
+     else
+     {
+      start=l2;
+      end=l2;
+      l2=l2->next;   
+     }
+        
+     while(l1 && l2)
+     {
+      if(l1->val<=l2->val)
+      {
+       end->next=l1;
+       end=l1;
+       l1=l1->next;
+      }
+      else
+      {
+       end->next=l2;
+       end=l2;
+       l2=l2->next;   
+      }
+     }
+     if(l1)
+         end->next=l1;
+     if(l2)
+          end->next=l2;
+      return start;
+        
+    }
+    
     ListNode* sortList(ListNode* head)
     {
     /* ListNode* temp=head; // o(n) space
@@ -127,33 +166,10 @@ public:
     }
     fast=slow->next;
     slow->next=NULL;
-    return merge(sortList(head),sortList(fast));
+    return Merge(sortList(head),sortList(fast));
 
     }
 
-    ListNode* merge(ListNode* l1,ListNode* l2)
-    {
-     ListNode* temp=new ListNode(-123456);
-     ListNode* cur=temp;
-     while(l1 && l2)
-     {
-      if(l1->val<l2->val)
-      {
-        cur->next=l1;
-        l1=l1->next;
-      }
-      else
-      {
-        cur->next=l2;
-        l2=l2->next;
-      }
-      cur=cur->next;
-     }
-     if(l1)
-         cur->next=l1;
-     else
-         cur->next=l2;
-     return temp->next;
-    }
+   
 };
 
