@@ -201,3 +201,45 @@ public:
      
     }
 };
+
+// 143. Reorder List
+
+class Solution {
+public:
+    void reorderList(ListNode* head)
+    {
+     if(!head || !head->next)
+         return;
+     ListNode* slow=head,*fast=head,*prev;
+     while(fast && fast->next)
+     {
+      prev=slow;
+      slow=slow->next;
+      fast=fast->next->next;
+     }
+     prev->next=NULL; // break in two half
+     // Reverse LL from mid 
+     ListNode* temp1=slow,*temp2=NULL,*temp3=NULL;
+     while(temp1)
+     {
+      temp3=temp1->next;
+      temp1->next=temp2;
+      temp2=temp1;
+      temp1=temp3;
+     }
+     ListNode* cur1=head,*cur2=temp2;
+     while(cur1 && cur2)
+     {
+      temp1=cur1->next;
+      temp2=cur2->next;
+      cur1->next=cur2;
+      cur2->next=temp1;
+      cur1=temp1;
+      if(!cur1) // if  odd no. of nodes
+          cur2->next=temp2;
+      cur2=temp2;
+     }
+     
+     
+    }
+};
