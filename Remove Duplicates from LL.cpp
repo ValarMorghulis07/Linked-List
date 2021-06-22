@@ -36,7 +36,7 @@ public:
      ListNode* temp=head,*start=NULL,*end=NULL;
      while(temp && temp->next)
      {
-      if(temp->val==temp->next->val)
+      if(temp->val==temp->next->val) // just for skipping all equal nodes --> [1,2,3,3,4,4,5]
       {
        int zz=temp->val;
        while(temp && temp->val==zz)
