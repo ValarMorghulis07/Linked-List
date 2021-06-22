@@ -1,3 +1,8 @@
+/*
+Given a linked list, rearrange it such that the converted list should be of the form a < b > c < d > e < f …
+where a, b, c… are consecutive data nodes of the linked list.
+*/
+
 #include <bits/stdc++.h>
 #define mem(dp,a) memset(dp,a,sizeof(dp))
 #define pb(x) push_back(x)
