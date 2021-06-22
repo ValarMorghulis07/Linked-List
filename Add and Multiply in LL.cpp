@@ -38,6 +38,11 @@ public:
 
 // 445. Add LL 2  --> (This question is like sum we do in school days)
 
+/*
+1.) add both list from the front and add resultant at the front (No carry in this case)
+2.) again add at the front  from resultant list in this case take carae of carry.
+*/
+
 class Solution {
 public:
     ListNode* addToFront(int val,ListNode* res)
