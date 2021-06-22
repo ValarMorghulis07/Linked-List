@@ -27,3 +27,10 @@ public:
      
     }
 };
+
+/*
+Follow up: Could you do this in one pass?
+
+solutiton:
+  Yes makae a dummy node at the beginning and maintain a distance of n and when front pointer reaches null then delete back pointer.
+*/
