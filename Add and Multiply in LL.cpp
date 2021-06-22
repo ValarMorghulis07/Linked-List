@@ -36,7 +36,7 @@ public:
     }
 };
 
-// 445. Add LL 2
+// 445. Add LL 2  --> (This question is like sum we do in school days)
 
 class Solution {
 public:
