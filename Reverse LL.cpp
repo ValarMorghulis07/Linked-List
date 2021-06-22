@@ -145,7 +145,7 @@ public:
     }
 };
 
-// 24. Swap Nodes in Pairs
+// 24. Swap Nodes in Pairs --> (if asked without changing vaue then reverse in size of 2)
 
 
 class Solution {
