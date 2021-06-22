@@ -25,7 +25,7 @@
           return true;
  }
   
-  // O(n) && O(1) space
+  // O(n) && O(1) space  --> (split in half anad if odd size keep 1 node more in first half then reverse first half and then compare)
    
 class Solution {
 public:
