@@ -158,7 +158,7 @@ public:
      */
     if(!head || !head->next)// O(constant space)
         return head;
-    ListNode* slow=head,*fast=head->next; // to bring slow at exactly mid position containing equal nodes
+    ListNode* slow=head,*fast=head->next; // to bring slow at exactly mid position containing equal nodes (It means while dividing list, first half should have ceil(n/2) size)
     while(fast && fast->next)
     {
      slow=slow->next;
