@@ -217,7 +217,7 @@ public:
       slow=slow->next;
       fast=fast->next->next;
      }
-     prev->next=NULL; // break in two half
+     prev->next=NULL; // break in two half && if odd no. of nodes are there then keep 1 node more on the right side.
      // Reverse LL from mid 
      ListNode* temp1=slow,*temp2=NULL,*temp3=NULL;
      while(temp1)
